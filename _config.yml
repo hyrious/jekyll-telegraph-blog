@@ -1,0 +1,80 @@
+#============================
+# Custom Variables
+#----------------------------
+title: hyrious.log
+author: hyrious
+email: hyrious@outlook.com
+telegram: https://t.me/hyrious
+description: leaky abstraction.
+url: https://hyrious.github.io
+date_format: '%B %d, %Y'
+
+# Links
+# ---------------------------
+links:
+  Seiran:             https://seiran.mist.so
+  orzFly:             https://orzfly.com
+  Taroxd:             https://taroxd.github.io
+  Esphas:             https://esphas.github.io
+  oott123:            https://best33.com
+  喵帕斯:             https://github.com/Rictusempra
+  竹筏渡海:           https://limbowandering.github.io
+  花开:               http://blog.ikaroscc.cn
+
+# Bookmarks
+# ---------------------------
+bookmarks:
+  Codewars:           https://www.codewars.com/dashboard
+  Seattle.rb:         http://www.seattlerb.org/projects
+  Rake:               http://onestepback.org/articles/buildingwithrake
+  Thor:               https://github.com/erikhuda/thor
+  Boost C++:          http://www.boost.org/doc/libs/1_64_0
+  zzz:                https://zzz.buzz/zh
+  LearnXinYminutes:   https://learnxinyminutes.com
+  Batsh:              http://batsh.org
+  Project1:           https://rpg.blue
+  Beatstage:          http://www.beatstage.com
+  SICP:               https://mitpress.mit.edu/sicp/full-text/book/book.html
+  Pro Git:            https://git-scm.com/book/en/v2
+  Java Books:         https://docs.oracle.com/javase/8/javase-books.htm
+  Thinking in Java:   https://java.quanke.name/
+  Kotlin:             https://kotlinlang.org/docs/reference/grammar.html
+  Python:             https://docs.python.org/3
+  PHP:                https://secure.php.net/manual/zh
+  PHP The Right Way:  https://laravel-china.github.io/php-the-right-way
+  Nginx:              https://nginx.org/en/docs
+  Rainmeter:          https://docs.rainmeter.net
+  Aria2:              https://calomel.org/aria2.html
+  .NET:               https://docs.microsoft.com/zh-cn/dotnet
+  Emoji:              https://www.webpagefx.com/tools/emoji-cheat-sheet
+  HUBOT:              https://hubot.github.com/docs/scripting
+  DevDocs:            https://devdocs.io
+  GitHub Desktop:     https://desktop.github.com/release-notes
+  Scratchapixel:      http://www.scratchapixel.com
+  x86 Assembly:       http://www.cs.virginia.edu/~evans/cs216/guides/x86.html
+  VTxd0:              http://i.stack.imgur.com/VTxd0.jpg
+  UUID:               https://www.uuidgenerator.net
+  orzFly's Stars:     https://github.com/orzFly?tab=stars
+  hyrious' Stars:     https://github.com/hyrious?tab=stars
+  Thor:               https://github.com/erikhuda/thor/wiki/Generators
+  KaTeX:              https://khan.github.io/KaTeX/function-support.html
+  Pip Packages:       https://www.lfd.uci.edu/~gohlke/pythonlibs/#distribute
+  03k:                https://03k.org/kms.html
+  DomainComp:         https://www.domcomp.com
+
+#============================
+# Building Configuration
+#----------------------------
+destination: /share
+exclude: [README.md, LICENSE.md, Gemfile, Gemfile.lock, Rakefile, watch.cmd]
+plugins: [jemoji, jekyll-sitemap, jekyll-paginate, jekyll-feed]
+permalink: /p/:title.html
+excerpt_separator: ""
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    disable: true
+sass: { style: compressed }
+defaults: [{scope: {path: ""}, values: {layout: post}}]

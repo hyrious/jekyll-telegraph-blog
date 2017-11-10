@@ -1,0 +1,1 @@
+@setlocal && call bundle exec jekyll b -w %*

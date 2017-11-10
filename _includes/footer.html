@@ -1,0 +1,23 @@
+<script>
+  function loadAsset(tag, obj){
+    document.head.appendChild(Object.assign(document.createElement(tag), obj));
+  }
+  function loadTheme(theme){
+    if (JSON.parse(window.localStorage.getItem(theme))) document.body.classList.add(theme);
+  }
+  function toggleTheme(theme){
+    window.localStorage.setItem(theme, !JSON.parse(window.localStorage.getItem(theme)));
+    document.body.classList.toggle(theme);
+  }
+  window.addEventListener('load', function(){
+    loadTheme('dracula');
+    loadAsset('link', { rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans|Ubuntu+Mono' });
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.8.1/katex.min.js" integrity="sha384-sKYm5us3z9/bRQA+cc3gPzqwI5RVgL8vJQx1lpBudr9IzHOR8fnFUH68dz1GsTQw" crossorigin="anonymous"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  Array.from(document.querySelectorAll("script[type='math/tex']")).forEach(function(el) { el.outerHTML = katex.renderToString(el.textContent, { displayMode: false }); });
+  Array.from(document.querySelectorAll("script[type='math/tex; mode=display']")).forEach(function(el) { el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), { displayMode: true }); });
+</script>

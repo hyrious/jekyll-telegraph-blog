@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<script>
+(function(){(function(){var e=window.navigator.userAgent,a=e.indexOf('MSIE ');if(0<a)return parseInt(e.substring(a+5,e.indexOf('.',a)),10);var b=e.indexOf('Trident/');if(0<b){var c=e.indexOf('rv:');return parseInt(e.substring(c+3,e.indexOf('.',c)),10)}return!1})()&&(window.location.href='https://www.google.com/chrome/browser/desktop/index.html')})();
+</script>
+
+<main class="post">
+
+<header>{% if page.title %}
+  <h1>{{ page.title }}</h1>{% endif %}
+  <address>{% if page.date %}<time>{{ page.date | date: site.date_format }}</time>{% endif %}</address>
+</header>
+
+<article>
+
+{{ content }}
+
+</article>
+
+</main>

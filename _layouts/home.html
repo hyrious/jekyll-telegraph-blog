@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<main class="home">
+  <header>
+    <h1>{{ site.title }}</h1>
+    <address>{{ site.description }}</address>
+  </header>
+  <ul>{% for post in site.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+  </ul>
+  <div class="links">{% for link in site.links %}
+    <a href="{{ link[1] }}" target="_blank">{{ link[0] }}</a>{% endfor %}
+  </div>
+  <footer>
+    <a href="{{ site.telegram }}" title="contact me on telegram">{{ site.author }}</a>
+    <a href="/LICENSE.txt" title="The content of this site is licensed under the Creative Commons Zero v1.0 Universal License.">&copy;</a>
+    {{ site.time | date: "%Y" }}
+    <small><a href="/pubkey.txt">pubkey</a></small>
+    <small><a href="javascript:void(0);" title="dark theme" onclick="toggleTheme('dracula')">Dracula</a></small>
+  </footer>
+</main>
+<script>
+  window.addEventListener('load', function(){
+    var colors = ['cyan', 'green', 'orange', 'pink', 'purple', 'yellow', 'red'].sort(function(){
+      return 0.5 - Math.random();
+    });
+    Array.from(document.getElementsByClassName('links')[0].getElementsByTagName('a')).forEach(function(el,i){
+      el.classList.add(colors[i % colors.length]);
+    });
+  });
+</script>
