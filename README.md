@@ -20,8 +20,6 @@ rake unpublish      # unpublish post to draft
 
 ## Screenshots
 
-<style>img{margin:20px;zoom:.5}</style>
-
 ![](img/0.png)
 ![](img/1.png)
 ![](img/2.png)
